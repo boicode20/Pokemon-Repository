@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 1fr ;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(248, 248, 248);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pokemon-logo{
+    background-color: rgb(244, 207, 73);
+}
+.pokemon-logo img{
+    width: 250px;
+}
+#poke-ball{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    
+}
+.pokemon-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    
+}
+.pokemon-listname{
+  width: 500px;
+  height: 600px;
+  border: 2px solid rgb(218, 218, 218);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.pokemon-name-title{
+    text-align: start;
+}
+.pokemon-name-title h1{
+    font-size: 25px;
+}
+.pokemon-stats-container{
+    width:500px;
+    height: 600px;
+    border-radius: 10px;
+
+    border: 2px solid rgb(218, 218, 218);
+}
+.pokemon-limit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.pokemon-limit-container h6{
+    color: rgb(122, 120, 120);
+}
+.limit{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+#limit{
+    width: 30%;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(197, 196, 196);
+}
+#search{
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    border: 1px solid rgb(197, 196, 196);
+    outline: none;
+    padding-left: 15px;
+
+}
+.list-counter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#submit{
+    height: 37px;
+    border: none;
+}
+.list-counter{
+    color: rgb(147, 147, 147);
+    
+}
+.name-container{
+    height: 360px;
+
+}
+/* Width and height for scrollbar */
+
+.name-overflow{
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.name-overflow::-webkit-scrollbar {
+    width: 12px; /* Adjust as needed */
+    height: 12px; /* Adjust as needed */
+}
+
+/* Track (background) of scrollbar */
+.name-overflow::-webkit-scrollbar-track {
+    background: #e6e6e6;
+    border-radius: 30px;
+    /* Adjust background color as needed */
+}
+
+/* Handle (thumb) of scrollbar */
+.name-overflow::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 30px;
+    /* Adjust thumb color as needed */
+}
+
+/* Hide scrollbar by default */
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ensure that overflow property doesn't interfere with custom scrollbar */
+.name-overflow {
+    height: 90%;
+    overflow-y: auto; /* or overflow-y: hidden; */
+}
+@media screen and (max-width:670px){
+    .pokemon-listname,.pokemon-stats-container{
+        width: 100%;
+    }
+}

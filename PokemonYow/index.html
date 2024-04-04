@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PokeDex</title>
+    <link rel="icon" href="Pokemon-3-27-2024.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+    <div class="pokemon-stats">
+        <div class="stats-container">
+            <div class="close-btn">
+                <button id="close-btn">x</button>
+            </div>
+            <div class="stats-details">
+                <div class="stat-left">
+                    <div class="stat-id">
+                        <h6 id="poke-id">#1</h6>
+                    </div>
+                    <div class="stat-img">
+                        <img src="/PokemonAPi/pikachu.jpg" alt="" id="stat-img-id">
+                    </div>
+                    <div class="stat-name">
+                        <h1 id="stat-name-get">Pikachu</h1>
+                    </div>
+                    <div class="stat-moves">
+                        <div class="first-move">
+                            <h5 id="first">mega-punch</h5>
+                        </div>
+                        <div class="second-move">
+                            <h5 id="second">pay-day</h5>
+                        </div>
+                        <div class="third-move">
+                            <h5 id="third">thunder-punch</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-right">
+                    <div class="stat-hp">
+                        <h6>Hp: <span id="hp">36</span></h6>
+                        <div class="hp-bar">
+                            <div class="h-bar"></div>
+                        </div>
+                    </div>
+                    <div class="stat-attact">
+                        <h6>Attack: <span id="attack">36</span></h6>
+                        <div class="attack-bar">
+                            <div class="a-bar"></div>
+                        </div>
+                    </div>
+                    <div class="stat-defense">
+                        <h6>Defense: <span id="defense">36</span></h6>
+                        <div class="defense-bar">
+                            <div class="d-bar"></div>
+                        </div>
+                    </div>
+                    <div class="stat-special">
+                        <h6>Special-Attack: <span id="special">36</span></h6>
+                        <div class="special-bar">
+                            <div class="sa-bar"></div>
+                        </div>
+                    </div>
+                    <div class="stat-special-defense">
+                        <h6>Special-Defense: <span id="special-defense">36</span></h6>
+                        <div class="special-defense-bar">
+                            <div class="sd-bar"></div>
+                        </div>
+                    </div>
+                    <div class="stat-speed">
+                        <h6>Speed: <span id="speed">36</span></h6>
+                        <div class="speed-bar">
+                            <div class="sp-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-parent">
+        <div class="pokemon-logo">
+            <img src="Pokemon-3-27-2024.png" alt="">
+            <img src="pokeball.png" alt="" id="pokeball">
+        </div>
+    </div>
+    <div class="container-input">
+        <div class="pokemon-limit">
+            <div class="limit-parent">
+                <label for="limit">Enter pokemon limit</label>
+                <div class="input-parent">
+                    <div class="limit-icon">
+                        <input type="number" name="" id="limit" placeholder="1-1000">
+                        <div class="button-parent">
+                            <button id="submit">Submit</button>
+                        </div>
+                    </div>
+                 
+                  
+
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="pokemon-search">
+            <input type="text" name="" id="search" placeholder="Pokemon name or id">
+        </div>
+        
+    </div>
+    <div class="pokemon-count">
+        <h6>Total</h6>
+        <span id="count">0</span>
+    </div>
+       
+    <div class="pokemon-loading-container">
+        <div class="pokemon-loading">
+           
+                <img src="Poké_Ball_Loading.svg.png" alt="" id="ball">
+                <img src="Loading-3-29-2024.png" alt="" id="loading">
+           
+        </div>
+    </div>
+    <div class="notification-parent">
+        <div class="pokemon-notif">
+            <h1>Please input pokemon limit to fetch pokemons.</h1>
+            <span>Warning!!! If the limit is heigher please be inform that will take too long to fetch all pokemons. Thank You!</span>
+        </div>
+    </div>
+
+        <div class="pokemon-list"></div>
+        <!-- <div class="pokemon-card">
+            <div class="pokemon-id">
+                <h6>#1</h6>
+            </div>
+            <div class="pokemon-img">
+                <img src="/PokemonAPi/pikachu.jpg" alt="">
+            </div>
+            <div class="pokemon-name">
+                <h3>Pikachu</h3>
+            </div>
+        </div> -->
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      AOS.refresh();
+    </script>
+</body>
+</html>
